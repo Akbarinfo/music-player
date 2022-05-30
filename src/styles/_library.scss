@@ -1,0 +1,56 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: lightcyan;
+  box-shadow: 2px 2px 50px rgb(207, 207, 207);
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 2rem;
+  }
+
+
+  &__song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 15px;
+    transition: all 0.4s linear;
+
+    img {
+      width: 30%;
+    }
+
+    &:hover {
+      background-color: rgb(197, 155, 236);
+    }
+  }
+
+  &__desc {
+    padding-left: 1rem;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__active {
+    background-color: rgb(197, 155, 236);
+  }
+
+  &__canvas {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

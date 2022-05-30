@@ -1,0 +1,90 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20vh;
+
+  &__timebox {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    input {
+      width: 100%;
+      padding: 1rem 0;
+      margin: 0 10px;
+      background-color: transparent;
+      -webkit-appearance: none;
+      cursor: pointer;
+
+    }
+  }
+
+  &__track {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    // background-color: rgb(158, 196, 189);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__animate {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(82, 82, 82);
+    pointer-events: none;
+    transform: translateX(0%);
+  }
+
+  &__play {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    svg {
+      cursor: pointer  ;
+    }
+  }
+
+  &__icon-left {
+
+  }
+
+  &__icon-play {
+
+  }
+
+  &__icon-right {
+
+  }
+
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 16px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px){
+  .player__timebox {
+    width: 90%;
+  }
+
+  .player__play {
+    width: 60%;
+  }
+}
